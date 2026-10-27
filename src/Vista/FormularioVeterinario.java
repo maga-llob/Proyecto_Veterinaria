@@ -68,7 +68,8 @@ itemInicio.addActionListener(e -> {
 
         // [USER_ACTION_START:itemMascotas]
 itemMascotas.addActionListener(e -> {
-            // TODO: accion para Mascotas
+            new FormularioMascotasVeterinario(usuario).setVisible(true);
+            dispose();
         });
         // [USER_ACTION_END:itemMascotas]
 
@@ -92,7 +93,8 @@ itemNotificaciones.addActionListener(e -> {
 
         // [USER_ACTION_START:itemPerfil]
 itemPerfil.addActionListener(e -> {
-            // TODO: accion para perfil
+            new FormularioPerfilVeterinario(usuario).setVisible(true);
+            dispose();
         });
         // [USER_ACTION_END:itemPerfil]
 

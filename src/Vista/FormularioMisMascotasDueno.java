@@ -75,7 +75,8 @@ item_1_1.addActionListener(e -> {
 
         // [USER_ACTION_START:item_2_1]
 item_2_1.addActionListener(e -> {
-            // TODO: accion para Perfil
+            new FormularioPerfilDueno(usuario).setVisible(true);
+            dispose();
         });
         // [USER_ACTION_END:item_2_1]
 

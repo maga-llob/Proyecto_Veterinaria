@@ -70,8 +70,8 @@ itemInicio.addActionListener(e -> {
 
         // [USER_ACTION_START:BotonPerfil]
 BotonPerfil.addActionListener(e -> {
-            // TODO: accion de BotonPerfil
-            //Me falta crear formulario perfil y agregarlo al sistema
+            new FormularioPerfilDueno(usuario).setVisible(true);
+           dispose();
         });
         // [USER_ACTION_END:BotonPerfil]
 
