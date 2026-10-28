@@ -100,4 +100,19 @@ public class ConsultaDAO {
             return ps.executeUpdate() > 0;
         }
     }
+
+    // Completa una consulta agendada: guarda lo que se hizo y la fecha/hora real
+        public boolean actualizar(consulta c) throws SQLException {
+        String sql = "UPDATE `consulta` SET `procedimiento` = ?, `fecha_hora` = ? WHERE `id_consulta` = ?";
+
+        try (Connection cn = Conexion.getConexion();
+         PreparedStatement ps = cn.prepareStatement(sql)) {
+
+        ps.setString(1, c.getProcedimiento());
+        ps.setTimestamp(2, c.getFecha_hora() != null ? Timestamp.valueOf(c.getFecha_hora()) : null);
+        ps.setInt(3, c.getId_consulta());
+
+        return ps.executeUpdate() > 0;
+        }
+    }
 }

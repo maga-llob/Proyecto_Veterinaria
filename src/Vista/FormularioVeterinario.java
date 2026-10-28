@@ -11,6 +11,7 @@ import java.io.File;
 // import java.io.File;
 import java.sql.SQLException;
 import servidor.DAO.VeterinarioDAO;
+
 // [USER_IMPORTS_END]
 
 public class FormularioVeterinario extends JFrame {
@@ -81,7 +82,8 @@ itemMascotas.addActionListener(e -> {
 
         // [USER_ACTION_START:itemNotificaciones]
 itemNotificaciones.addActionListener(e -> {
-            // TODO: accion para 🕭
+            new FormularioNotificaciones(usuario).setVisible(true);
+            dispose();
         });
         // [USER_ACTION_END:itemNotificaciones]
 
@@ -107,7 +109,8 @@ itemPerfil.addActionListener(e -> {
 
         // [USER_ACTION_START:BotonRegistrarConsulta]
 BotonRegistrarConsulta.addActionListener(e -> {
-            // TODO: accion de BotonRegistrarConsulta
+            new FormularioRegistrarConsulta(usuario).setVisible(true);
+            dispose();
         });
         // [USER_ACTION_END:BotonRegistrarConsulta]
 
@@ -118,7 +121,8 @@ BotonRegistrarConsulta.addActionListener(e -> {
 
         // [USER_ACTION_START:BotonAgendarConsulta]
 BotonAgendarConsulta.addActionListener(e -> {
-            // TODO: accion de BotonAgendarConsulta
+            new FormularioAgendarConsulta(usuario).setVisible(true);
+            dispose();
         });
         // [USER_ACTION_END:BotonAgendarConsulta]
 
